@@ -3,6 +3,51 @@ import React from 'react';
 function App() {
   return (
     <div className="wrapper clear">
+      <div className="overlay">
+        <div className="drawer">
+          <h2 className="mb-30">Корзина</h2>
+          <div className="items">
+            <div className="cartItem d-flex align-center mb-20">
+              {/* <img width={70} className="mr-20" height={70} src="./sneakers/1.jpg" alt="Sneakers" /> */}
+              <div
+                style={{ backgroundImage: 'url(./sneakers/1.jpg)' }}
+                className="cartItemImg"></div>
+              <div className="mr-20 flex">
+                <p className="mb-5">Мужские Кроссовки Nike Air Max 270</p>
+                <b>12 999 руб.</b>
+              </div>
+              <img className="removeBtn" src="/button-remove.svg" alt="remove" />
+            </div>
+
+            <div className="cartItem d-flex align-center mb-20">
+              {/* <img width={70} className="mr-20" height={70} src="./sneakers/1.jpg" alt="Sneakers" /> */}
+              <div
+                style={{ backgroundImage: 'url(./sneakers/1.jpg)' }}
+                className="cartItemImg"></div>
+              <div className="mr-20 flex">
+                <p className="mb-5">Мужские Кроссовки Nike Air Max 270</p>
+                <b>12 999 руб.</b>
+              </div>
+              <img className="removeBtn" src="/button-remove.svg" alt="remove" />
+            </div>
+          </div>
+          
+          <ul className = 'cartTotalBlock'>
+            <li className="d-flex">
+              <span>Итого: </span>
+              <div></div>
+              <b>21 498 руб. </b>
+            </li>
+            <li className="d-flex">
+              <span>Налог 5%</span>
+              <div></div>
+              <b>1074 руб. </b>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+
       <header className="d-flex justify-between align-center p-40">
         <div className="d-flex align-center">
           <img width={40} height={40} src="/logo.png" />
@@ -34,6 +79,9 @@ function App() {
 
         <div className="d-flex">
           <div className="card">
+            <div className="favorite">
+              <img src="./heard-unliked.svg" alt="unliked" />
+            </div>
             <img width={133} height={112} src="./sneakers/1.jpg" />
             <h5>Мужские Кроссовки Nike Air Max 270</h5>
             <div className="d-flex justify-between align-center">
