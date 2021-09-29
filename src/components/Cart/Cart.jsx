@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Cart.module.scss'
 
 const Cart = ({image, name, salary}) => {
   const [liked, setLiked] = React.useState(false)
@@ -8,10 +9,10 @@ const Cart = ({image, name, salary}) => {
   }
 
   return (
-    <div className="card">
-      <div className="favorite">
+    <div className={styles.card}>
+      <div className={styles.favorite}>
         <img
-          onClick={() => liker()}
+          onClick={liker}
           src={liked ? './heard-liked.svg' : './heard-unliked.svg'}
           alt="unliked"
         />
@@ -23,7 +24,7 @@ const Cart = ({image, name, salary}) => {
           <span>Цена: </span>
           <b>{salary}.</b>
         </div>
-        <button className="button">
+        <button className={styles.button}>
           <img width={11} height={11} src="/btnPlus.svg" />
         </button>
       </div>
