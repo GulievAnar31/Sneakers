@@ -1,10 +1,20 @@
 import React from 'react';
 
 const Cart = ({image, name, salary}) => {
+  const [liked, setLiked] = React.useState(false)
+
+  const liker = () => {
+    setLiked(!liked);
+  }
+
   return (
     <div className="card">
       <div className="favorite">
-        <img src="./heard-unliked.svg" alt="unliked" />
+        <img
+          onClick={() => liker()}
+          src={liked ? './heard-liked.svg' : './heard-unliked.svg'}
+          alt="unliked"
+        />
       </div>
       <img width={133} height={112} src={image} />
       <h5>{name}</h5>
