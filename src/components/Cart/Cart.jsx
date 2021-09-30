@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './Cart.module.scss'
+import styles from './Cart.module.scss';
 
-const Cart = ({image, name, salary}) => {
-  const [liked, setLiked] = React.useState(false)
+const Cart = ({ image, name, salary }) => {
+  const [liked, setLiked] = React.useState(false);
 
   const liker = () => {
     setLiked(!liked);
-  }
+  };
 
   return (
     <div className={styles.card}>
@@ -30,6 +30,6 @@ const Cart = ({image, name, salary}) => {
       </div>
     </div>
   );
-}
+};
 
 export default Cart;
